@@ -1,4 +1,4 @@
-package com.arena.model.actions;
+package model.actions;
 
 import java.util.List;
 import java.util.stream.Collectors;

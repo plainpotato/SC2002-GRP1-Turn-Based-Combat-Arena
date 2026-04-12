@@ -1,5 +1,6 @@
-package com.arena.model.actions;
-import com.arena.model.combatants.Combatant;
+package model.actions;
+
+import model.combatants.Combatant;
 import java.util.List;
 
 
