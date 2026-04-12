@@ -21,12 +21,12 @@ public class Potion implements Item {
     @Override public boolean isConsumed() { return consumed; }
 
     @Override
-    public void use(Combatant user, List<Combatant> allCombatants) [
+    public void use(Combatant user, List<Combatant> allCombatants) {
         int before = user.getCurrentHP();
         user.heal(MAX_HEAL_AMOUNT);
         int after = user.getCurrentHP();
         consumed = true;
         System.out.printf("%s used a Potion! HP %d -> %d (+%d).%n", user.getName(), before, after, after - before);
-    ]
+    }
     
 }
