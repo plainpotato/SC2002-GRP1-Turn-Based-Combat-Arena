@@ -1,5 +1,7 @@
 package model.actions;
 
+import model.combatants.Combatant;
+
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
