@@ -1,10 +1,10 @@
 package model.actions;
 
 import model.combatants.Combatant;
-import com.arena.model.combatants.Enemy;
-import com.arena.model.combatants.Player;
-import com.arena.model.combatants.Warrior;
-//add stun effect later
+import model.combatants.Enemy;
+import model.combatants.Player;
+import model.combatants.Warrior;
+import model.statuses.Stun;
 
 import java.util.List;
 import java.util.Scanner;
@@ -34,7 +34,7 @@ public class ShieldBashAction implements Action {
 
         int damage = Math.max(0, actor.getAttack() - target.getDefense());
         target.takeDamage(damage);
-        //add stun effect to target here
+        target.addStatusEffect(new StunEffect());
 
         System.out.printf("%s uses Shield Bash on %s! Damage: %d. %s is STUNNED for 2 turns!%n",
                 actor.getName(), target.getName(), damage, target.getName());
