@@ -1,6 +1,9 @@
 package model.actions;
 
-import combatants.Combatant;
+import model.combatants.Combatant;
+import model.combatants.Player;
+import model.items.Item;
+import ui.BattleDisplay;
 
 import java.util.List;
 
@@ -27,6 +30,17 @@ public class ItemAction implements Action {
         if (inventory.isEmpty()) {
             System.out.println("No items available!");
             return;
+        }
+
+        display.showItemMenu(inventory);
+        int choice = display.readPlayerChoice(1, inventory.size());
+        Item chosen = inventory.get(choice - 1);
+
+        chosen.use(actor, allCombatants);
+
+        if (chosen.isConsumed()) {
+            inventory.remove(chosen);
+            System.out.printf("  -> %s consumed.%n", chosen.getName());
         }
     }
 }
