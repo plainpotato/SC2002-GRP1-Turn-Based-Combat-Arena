@@ -1,6 +1,10 @@
 package model.actions;
 
 import model.combatants.Combatant;
+import com.arena.model.combatants.Enemy;
+import com.arena.model.combatants.Player;
+import com.arena.model.combatants.Warrior;
+//add stun effect later
 
 import java.util.List;
 import java.util.Scanner;
@@ -25,10 +29,42 @@ public class ShieldBashAction implements Action {
 
     @Override
     public void execute(Combatant actor, List<Combatant> allCombatants) {
+        Combatant target = pickTarget(allCombatants);
+        if (target == null) return;
 
+        int damage = Math.max(0, actor.getAttack() - target.getDefense());
+        target.takeDamage(damage);
+        //add stun effect to target here
+
+        System.out.printf("%s uses Shield Bash on %s! Damage: %d. %s is STUNNED for 2 turns!%n",
+                actor.getName(), target.getName(), damage, target.getName());
+
+        if (!target.isAlive()) {
+            System.out.printf("  -> %s has been ELIMINATED!%n", target.getName());
+        }
+
+        warrior.triggerSpecialSkillCooldown();
     }
 
     private Combatant pickTarget(List<Combatant> allCombatants) {
+        List<Combatant> liveEnemies = allCombatants.stream()
+                .filter(c -> c instanceof Enemy && c.isAlive())
+                .collect(Collectors.toList());
 
+        if (liveEnemies.isEmpty()) return null;
+
+        System.out.println("Choose a target for Shield Bash:");
+        for (int i = 0; i < liveEnemies.size(); i++) {
+            System.out.printf("  [%d] %s%n", i + 1, liveEnemies.get(i));
+        }
+
+        Scanner sc = new Scanner(System.in);
+        int choice;
+        do {
+            System.out.print("Enter choice: ");
+            choice = sc.nextInt();
+        } while (choice < 1 || choice > liveEnemies.size());
+
+        return liveEnemies.get(choice - 1);
     }
 }
