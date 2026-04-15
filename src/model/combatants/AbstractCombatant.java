@@ -116,7 +116,7 @@ public abstract class AbstractCombatant implements Combatant {
 
     @Override
     public void takeDamage(int damage) {
-        setHp(hp - Math.max(0, damage));
+        setHp(Math.max(0, hp - damage));
     }
 
     @Override
