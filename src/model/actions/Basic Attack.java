@@ -5,7 +5,7 @@ import model.combatants.Combatant;
 import model.combatants.Enemy;
 import model.combatants.Player;
 import ui.BattleDisplay;
-//import smokebomb effect later
+import model.statuses.SmokeBomb;
 
 import java.util.List;
 import java.util.Scanner;
@@ -30,7 +30,11 @@ public class BasicAttackAction implements Action {
 
         int rawDamage = Math.max(0, actor.getAttack() - target.getDefense());
 
-        // Smoke Bomb: enemy attacks deal 0 damage to player - will implement later
+        if (actor instanceof Enemy && target.hasStatusEffect(SmokeBombEffect.class)) {
+            System.out.printf("%s attacks %s — 0 damage (Smoke Bomb active)!%n",
+                    actor.getName(), target.getName());
+            return;
+        }
 
         target.takeDamage(rawDamage);
         System.out.printf("%s attacks %s for %d damage. (ATK %d - DEF %d)%n",
