@@ -1,12 +1,12 @@
-package com.arena.engine;
+package engine;
 
-import com.arena.model.combatants.Combatant;
-import com.arena.model.combatants.Enemy;
-import com.arena.model.combatants.Player;
-import com.arena.model.actions.Action;
-import com.arena.model.effects.StunEffect;
-import com.arena.strategy.TurnOrderStrategy;
-import com.arena.ui.BattleDisplay;
+import model.combatants.Combatant;
+import model.combatants.Enemy;
+import model.combatants.Player;
+import model.actions.Action;
+import model.effects.StunEffect;
+import strategy.TurnOrderStrategy;
+import ui.BattleDisplay;
 
 import java.util.List;
 
