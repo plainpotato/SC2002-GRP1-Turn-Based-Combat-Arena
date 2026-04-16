@@ -1,7 +1,7 @@
 package model.items;
 
 import model.combatants.Combatant;
-import model.statuses.SmokeBomb;
+import model.statuses.SmokeBombEffect;
 
 import java.util.List;
 

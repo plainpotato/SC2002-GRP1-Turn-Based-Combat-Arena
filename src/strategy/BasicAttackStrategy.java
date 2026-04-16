@@ -1,7 +1,7 @@
 package strategy;
 
 import model.actions.Action;
-import model.actions.BasicAttack;
+import model.actions.BasicAttackAction;
 import model.combatants.Combatant;
 
 import java.util.List;

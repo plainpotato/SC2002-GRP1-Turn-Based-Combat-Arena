@@ -1,6 +1,6 @@
 package model.combatants;
 
-import model.statuses.Status;
+import model.statuses.StatusEffect;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -22,9 +22,9 @@ public class Potion implements Item {
 
     @Override
     public void use(Combatant user, List<Combatant> allCombatants) {
-        int before = user.getCurrentHP();
+        int before = user.getHp();
         user.heal(MAX_HEAL_AMOUNT);
-        int after = user.getCurrentHP();
+        int after = user.getHp();
         consumed = true;
         System.out.printf("%s used a Potion! HP %d -> %d (+%d).%n", user.getName(), before, after, after - before);
     }

@@ -1,11 +1,10 @@
 package model.actions;
 
 import model.combatants.Combatant;
-import model.combatants.Combatant;
 import model.combatants.Enemy;
 import model.combatants.Player;
 import ui.BattleDisplay;
-import model.statuses.SmokeBomb;
+import model.statuses.SmokeBombEffect;
 
 import java.util.List;
 import java.util.Scanner;

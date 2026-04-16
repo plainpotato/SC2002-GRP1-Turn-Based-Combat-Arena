@@ -1,4 +1,4 @@
-package arena.ui;
+package ui;
 
 import engine.Level;
 import model.combatants.Player;

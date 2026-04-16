@@ -4,7 +4,7 @@ import model.combatants.Combatant;
 import model.combatants.Enemy;
 import model.combatants.Player;
 import model.combatants.Warrior;
-import model.statuses.Stun;
+import model.statuses.StunEffect;
 
 import java.util.List;
 import java.util.Scanner;

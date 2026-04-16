@@ -1,7 +1,7 @@
 package model.combatants;
 
 import model.actions.Action;
-import model.actions.ShieldBash;
+import model.actions.ShieldBashAction;
 import ui.BattleDisplay;
 
 /**

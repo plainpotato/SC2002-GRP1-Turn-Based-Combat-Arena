@@ -2,7 +2,7 @@ package model.statuses;
 
 import model.combatants.Combatant;
 
-public class Status {
+public interface StatusEffect {
     String getName();
 
     int getDuration();

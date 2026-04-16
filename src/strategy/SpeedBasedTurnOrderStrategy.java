@@ -1,6 +1,6 @@
 package strategy;
 
-import modelcombatants.Combatant;
+import model.combatants.Combatant;
 
 import java.util.ArrayList;
 import java.util.Comparator;

@@ -1,7 +1,8 @@
 package model.combatants;
 
 import model.actions.Action;
-import model.effects.Status;
+import model.statuses.StatusEffect;
+import java.util.List;
 
 
 public interface Combatant {

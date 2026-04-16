@@ -4,7 +4,7 @@ import model.combatants.Combatant;
 import model.combatants.Enemy;
 import model.combatants.Player;
 import model.actions.Action;
-import model.effects.StunEffect;
+import model.statuses.StunEffect;
 import strategy.TurnOrderStrategy;
 import ui.BattleDisplay;
 
