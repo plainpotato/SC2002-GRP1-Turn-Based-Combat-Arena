@@ -25,7 +25,7 @@ A command-line turn-based combat arena game built in Java using OODP and SOLID p
 ## How to Run
 1. Clone the repository
 2. Open in IntelliJ IDEA / Eclipse
-3. Run `App.java`
+3. Run `java -jar CombatArena.jar`
 
 ## Branching Strategy
 - `main`: stable
