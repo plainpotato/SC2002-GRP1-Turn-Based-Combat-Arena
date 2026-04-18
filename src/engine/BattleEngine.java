@@ -112,7 +112,8 @@ public class BattleEngine {
         combatant.tickStatusEffects();
 
         // Stunned: skip action but still tick (stun was already ticked above)
-        if (combatant.hasStatusEffect(StunEffect.class)) {
+        boolean isStunned = combatant.hasStatusEffect(StunEffect.class);
+        if (isStunned) {
             display.showStunnedSkip(combatant);
             // Spec: cooldown decrements only if a turn took place → stun = NO decrement
             return;

@@ -105,10 +105,10 @@ public abstract class AbstractCombatant implements Combatant {
     public void tickStatusEffects() {
         Iterator<StatusEffect> it = statusEffects.iterator();
         while (it.hasNext()) {
-            StatusEffect e = it.next();
-            e.tick(this);
-            if (e.isExpired()) {
-                e.onExpire(this);
+            StatusEffect effect = it.next();
+            effect.tick(this);
+            if (effect.isExpired()) {
+                effect.onExpire(this);
                 it.remove();
             }
         }
