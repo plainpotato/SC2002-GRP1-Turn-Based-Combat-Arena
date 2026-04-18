@@ -5,7 +5,7 @@
 - FENG YIXIANG
 - JONATHON CHU
 - KEERATIPRANON SIRAVIT
-
+ 
 ## Project Overview
 A command-line turn-based combat arena game built in Java using OODP and SOLID principles.
 
